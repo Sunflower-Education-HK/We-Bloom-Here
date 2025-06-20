@@ -83,9 +83,7 @@
   <p id="result"></p>
 
  <!-- Audio -->
-<audio id="start-sound" src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/Gamestart.mp3"
-preload="auto
-"></audio>
+<audio id="start-sound" src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/Gamestart.mp3"preload="auto"></audio>
 <audio id="clap-sound" src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/Clapping.mp3
 "></audio>
 <audio id="error-sound" src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/uh-oh.mp3
@@ -270,12 +268,9 @@ preload="auto
 }
 
     // 初始化
-window.addEventListener("DOMContentLoaded", () => {
-  const startSound = document.getElementById("start-sound");
-  startSound.play().catch((e) => {
-    // 如果瀏覽器阻擋自動播放，可以要求用戶互動後再播放
-    console.log("需要使用者互動才能播放音效");
-  });
+document.body.addEventListener("pointerdown", () => {
+  document.getElementById("start-sound").play();
+}, { once: true });
 
   updateProgress();
   loadNextSentence();
