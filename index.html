@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Bloom Here</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fefbe9;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 48px;
-      color: #4d4d4d;
-    }
-    p {
-      font-size: 20px;
-      color: #777;
-    }
-  </style>
+  <title>Sunflower Education</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>🌸 We Bloom Here</h1>
-  <p>Welcome to our interactive sentence building game for children.</p>
+  <div class="container">
+    <img src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/img/logo.png" alt="Sunflower Logo" 
+    style="width: 150px; margin-bottom: 20px;">
+    <h1>🌻 初級中文重組句子</h1><br>
+    <audio id="clap-sound" src="https://raw.githubusercontent.com/Sunflower-Education-HK/We-Bloom-Here/main/Gamestart.mp3"></audio>
+
+    <a href="chineseSentenseLevel 1.html" id="startLink">
+      <button id="startButton">開始 🎮</button>
+    </a>
+    <p id="hint"></p>
+  </div>
+
+  <script>
+    document.getElementById("startButton").addEventListener("click", function (e) {
+      e.preventDefault(); 
+      const audio = document.getElementById("clap-sound");
+      audio.play();
+
+      setTimeout(() => {
+        window.location.href = "chineseSentenseLevel 1.html";
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
