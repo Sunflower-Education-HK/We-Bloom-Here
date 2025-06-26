@@ -41,8 +41,8 @@ h1 {
 }
 
 .word {
-  background-color: #add8e6;
-  border: 2px solid #4682b4;
+  background-color: #f2b570;
+  border: 2px solid #ec993d;
   position: relative;
 }
 
@@ -66,4 +66,20 @@ h1 {
   font-size: 28px;
   color: #d2691e;
   height: 40px;
+}
+
+button {
+  background-color: #ec993d;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 2em;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #279f03;
 }
