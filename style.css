@@ -83,3 +83,24 @@ button {
 button:hover {
   background-color: #279f03;
 }
+
+#runner-container {
+  position: relative;
+  height: 150px;
+  margin-top: 20px;
+}
+
+#runner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  transition: left 0.5s ease;
+}
+
+#trophy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 120px;
+}

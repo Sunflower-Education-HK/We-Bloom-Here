@@ -126,6 +126,7 @@ function checkAnswer() {
       document.getElementById("result").textContent = "✅ 答對了！";
       document.getElementById("clap-sound").play();
       correctCount++;
+      moveRunner(); //
       setTimeout(() => loadNextSentence(), 3000);
     } else {
       document.getElementById("result").textContent = "❌ 錯了，再試一次～";
@@ -134,6 +135,7 @@ function checkAnswer() {
     }
   }
 }
+
 
 updateProgress();
 loadNextSentence();
