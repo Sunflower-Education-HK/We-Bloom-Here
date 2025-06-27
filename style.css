@@ -2,7 +2,6 @@ body {
   font-family: 'Comic Sans MS', sans-serif;
   background-color: #fff6ea;
   text-align: center;
-  padding: 40px 20px;
   overflow: hidden;
   margin: 0;
 }
@@ -22,9 +21,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  align-items: center;
   gap: 12px;
+  min-height: 120px; 
+  max-height: 120px; 
+  overflow-y: auto; 
 }
+
 
 .box {
   min-width: 100px;
@@ -83,3 +86,52 @@ button {
 button:hover {
   background-color: #279f03;
 }
+
+#runner-container {
+  position: relative;
+  height: 150px;
+  margin-top: 20px;
+}
+
+#runner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  transition: left 0.5s ease;
+  padding-bottom: 20px;
+}
+
+#trophy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 120px;
+  animation: swing 2s infinite;
+  padding-bottom: 20px;
+
+}
+
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+#nextLevelBtn {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+#nextLevelBtn button {
+  background-color: #ec993d;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
